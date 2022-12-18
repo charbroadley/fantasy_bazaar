@@ -34,6 +34,16 @@ def select (id):
         book = Book(result['title'], author, result['genre'], result['description'], result['stock_quantity'], result['buying_cost'], result['selling_price'], result['id'])
     return book
 
+def update (book):
+    sql = "UPDATE books SET (title, author_id, genre, description, stock_quantity, buying_cost, selling_price) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [book.title, book.author.id, book.genre, book.description, book.stock_quantity, book.buying_cost, book.selling_price, book.id]
+    run_sql(sql, values)
+
+def delete (id):
+    sql = "DELETE  FROM books WHERE id = %s"
+    values = [id]
+    run_sql(sql,values)
+
 def delete_all ():
     sql = "DELETE FROM books"
     run_sql(sql)

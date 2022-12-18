@@ -4,8 +4,7 @@
 <h2>Current Stock</h2>
 
 {% for book in all_books %}
-<b>Title:</b> {{ book.title }} <br>
-<b>Author:</b> {{ book.author.name }} <br>
+{{ book.title }} - {{ book.author.name }} <br>
 <a href="/books/{{ book.id }}">Full Details</a> <br>
 <br>
 <hr>

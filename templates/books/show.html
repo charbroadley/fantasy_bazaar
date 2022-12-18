@@ -15,6 +15,18 @@
 <b>Buying Cost:</b> £{{ book.buying_cost }}.00 <br>
 <b>Retail Price:</b> £{{ book.selling_price }}.00 <br>
 <br>
-<hr>
+
+<ul>
+    <li>
+        <a href="/books/{{ book.id }}/edit">Edit Book</a>
+    </li>
+    <li>
+        <form action="/books/{{ book.id }}/delete" method="post">
+            <input type="submit" value="Remove All Items From Stock">
+        </form>
+    </li>
+</ul>
 
 {% endblock %}
+
+
