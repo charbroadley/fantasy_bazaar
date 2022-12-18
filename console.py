@@ -8,20 +8,20 @@ import repositories.author_repository as author_repo
 # book_repo.delete_all()
 # author_repo.delete_all()
 
-author_1 = Author ("Terry Pratchett")
-# author_repo.save(author_1)
+# author_1 = Author ("Terry Pratchett")
+# # author_repo.save(author_1)
 
 # author_2 = Author("Iain M Banks")
-# author_repo.save(author_2)
+# # author_repo.save(author_2)
 
 # author_3 = Author("Chris Beckett")
-# author_repo.save(author_3)
+# # author_repo.save(author_3)
 
-# author_4 = Author("Steven Erikson")
-# author_repo.save(author_4)
+# # author_4 = Author("Steven Erikson")
+# # author_repo.save(author_4)
 
-# author_5 = Author("Frank Herbert")
-# author_repo.save(author_5)
+# # author_5 = Author("Frank Herbert")
+# # author_repo.save(author_5)
 
 # book_1 = Book("The Colour of Magic", author_1, "Fantasy", "The first book of the Discworld series. It follows the adventures of an incompetent wizard (Rincewind), a rich tourist (Twoflower), and Twoflower's sentient trunk (the Luggage).", 7, 3, 8)
 # book_repo.save(book_1)
@@ -50,11 +50,17 @@ author_1 = Author ("Terry Pratchett")
 # book_9 = Book("Dune", author_5, "Sci-Fi", "Dune is set in the distant future amidst a feudal interstellar society in which various noble houses control planetary fiefs. It tells the story of young Paul Atreides, whose family accepts the stewardship of the planet Arrakis. Winner of the inaugural Nebula Award for Best Novel. It is said to the the best-selling science fiction novel of all time.", 10, 4, 9)
 # book_repo.save(book_9)
 
-result = author_repo.select(11)
+# result = author_repo.select(11)
+# print (result.__dict__)
+
+# author_list = author_repo.select_all()
+# for author in author_list:
+#     print(author.__dict__)
+#     print(author.id)
+
+result = book_repo.select(19)
 print (result.__dict__)
-
-
-
+print (result.author.__dict__)
 
 
 

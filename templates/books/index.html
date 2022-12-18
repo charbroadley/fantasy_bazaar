@@ -4,17 +4,9 @@
 <h2>Current Stock</h2>
 
 {% for book in all_books %}
-<u><b>Book Details</u></b><br>
 <b>Title:</b> {{ book.title }} <br>
 <b>Author:</b> {{ book.author.name }} <br>
-<b>Genre:</b> {{ book.genre }} <br>
-<br>
-<u><b>Description</u></b><br>
-{{ book.description}} <br>
-<br>
-<u><b>More Information</u></b><br>
-<b>Buying Cost:</b> £{{ book.buying_cost }}.00 <br>
-<b>Retail Price:</b> £{{ book.selling_price}}.00 <br>
+<a href="/books/{{ book.id }}">Full Details</a> <br>
 <br>
 <hr>
 

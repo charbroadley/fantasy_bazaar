@@ -13,13 +13,13 @@ def index ():
 @bookshop_blueprint.route("/books")
 def bookshop_index ():
     bookshop = book_repo.select_all()
-    return render_template("books/index.html", title = 'Stock', all_books = bookshop)
+    return render_template("books/index.html", all_books = bookshop)
 
 # Page for form to add new book - got to have link to all_books so we can access authors in drop down box
 @bookshop_blueprint.route("/books/new")
 def new():
     author_list = author_repo.select_all()
-    return render_template("/books/new.html", title = "New Book", all_authors = author_list)
+    return render_template("/books/new.html", all_authors = author_list)
 
 # to save the info from the add new book form - not a new page
 @bookshop_blueprint.route("/books", methods = ['POST'])
@@ -36,3 +36,9 @@ def create ():
     book = Book (title, author, genre, description, stock_quantity, buying_cost, selling_price)
     book_repo.save(book)
     return redirect("/books")
+
+@bookshop_blueprint.route("/books/<id>")
+def show (id):
+    book = book_repo.select(id)
+    return render_template("/books/show.html", book = book)
+
