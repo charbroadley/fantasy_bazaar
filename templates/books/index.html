@@ -4,16 +4,19 @@
 <h2>Current Stock</h2>
 
 {% for book in all_books %}
-<u>Book Details</u>
-Title: {{ book.title }} <br>
-Author: {{ book.author.name }} <br>
-Genre: {{ book.genre }} <br>
+<u><b>Book Details</u></b><br>
+<b>Title:</b> {{ book.title }} <br>
+<b>Author:</b> {{ book.author.name }} <br>
+<b>Genre:</b> {{ book.genre }} <br>
 <br>
-Description: {{ book.description}} <br>
+<u><b>Description</u></b><br>
+{{ book.description}} <br>
 <br>
-<u>More Information</u> <br>
-Buying Cost: £{{ book.buying_cost }}.00 <br>
-Retail Price: £{{ book.selling_price}}.00
+<u><b>More Information</u></b><br>
+<b>Buying Cost:</b> £{{ book.buying_cost }}.00 <br>
+<b>Retail Price:</b> £{{ book.selling_price}}.00 <br>
+<br>
+<hr>
 
 {% endfor %}
 

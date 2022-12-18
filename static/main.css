@@ -1,3 +1,23 @@
-div {
+#logo {
+    text-align: center;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+}
+/* backgroud colour needs changing */
+.form{
+    background-color: aquamarine;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
     text-align: center;
 }

@@ -4,7 +4,7 @@ from models.author import Author
 import repositories.author_repository as author_repo
 
 def save (book):
-    sql = "INSERT INTO BOOKS (title, author_id, genre, description, stock_quantity, buying_cost, selling_price) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING *"
+    sql = "INSERT INTO books (title, author_id, genre, description, stock_quantity, buying_cost, selling_price) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING *"
     values = [book.title, book.author.id, book.genre, book.description, book.stock_quantity, book.buying_cost, book.selling_price]
     results = run_sql(sql, values)
     id = results[0]['id']

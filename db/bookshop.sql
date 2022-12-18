@@ -11,7 +11,7 @@ CREATE TABLE books(
     title VARCHAR(255),
     author_id INT NOT NULL REFERENCES authors(id),
     genre VARCHAR(255),
-    description VARCHAR(255),
+    description TEXT,
     stock_quantity INT,
     buying_cost INT,
     selling_price INT
