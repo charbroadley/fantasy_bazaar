@@ -8,7 +8,8 @@ bookshop_blueprint = Blueprint("books", __name__)
 
 @bookshop_blueprint.route("/")
 def index ():
-    return render_template("index.html", title='Fantasy Bazaar')
+    bookshop = book_repo.select_all()
+    return render_template("index.html", all_books = bookshop)
 
 @bookshop_blueprint.route("/books")
 def bookshop_index ():

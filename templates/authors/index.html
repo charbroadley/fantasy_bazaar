@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 
-{% block content %}    
-<a href="/authors/new">Add Author</a>
+{% block content %}
+<h2>All Authors</h2> 
+<br>
+<a href="/authors/new" class="add-link">Add a new author</a>
 
-<h2>All Authors</h2>
+<br><br><br>
+
 
 {% for author in author_list %}
 {{ author.name }} <br>

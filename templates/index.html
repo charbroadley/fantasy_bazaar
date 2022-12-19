@@ -2,9 +2,20 @@
 
 {% block content %}
 
-
-<h2>HOME PAGE</h2>
-<h3>STUFF GOES HERE TO REPRESENT COMPANY INTRANET</h3>
-
+<h3>WARNING!! LOW STOCK!! <br>
+    <br>
+    <u>ADD TO NEXT ORDER</u>
+</h3>
+<p id="stock-warning">
+{% for book in all_books %}
+    {% if book.stock_quantity <= 3 %}
+        {{ book.title }} - {{ book.author.name }} <br>
+    {% endif %}
+{% endfor %}
+</p>
 
 {% endblock %}
+
+
+
+

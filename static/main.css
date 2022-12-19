@@ -25,6 +25,20 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #ffcf60;
 }
+
+a {
+    text-decoration: none;
+    color: #b01823;
+}
+
+a:hover {
+    background-color: #ffcf60;
+}
+
+.add-link {
+    text-align: center;
+}
+
 /* backgroud colour needs changing */
 .form{
     background-color: #ffcf60;
@@ -60,10 +74,14 @@ h3 {
     text-align: center;
 }
 
-#in-stock{
+#stock-warning {
+    text-align: center;
+}
+
+#in-stock {
     color: green
 }
 
-#low-stock{
+#low-stock {
     color: red
 }

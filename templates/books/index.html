@@ -1,10 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<h2>Current Stock</h2> 
+<br>
+<a class="add-link" href="/books/new">Add a new book to stock</a>
 
-<a href="/books/new">Add Book</a>
+<br><br><br>
 
-<h2>Current Stock</h2>
+
+
 
 {% for book in all_books %}
 {{ book.title }} - {{ book.author.name }} <br>
