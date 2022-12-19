@@ -27,11 +27,29 @@ nav ul li a:hover {
 }
 /* backgroud colour needs changing */
 .form{
-    background-color: aquamarine;
+    background-color: #ffcf60;
     display: flex;
     flex-wrap: wrap;
-    width: 300px;
+    justify-content: space-around;
+    /* display: grid;
+    grid-template-columns: 150px 250px;
+    grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px; */
+    width: 350px;
     margin: 0 auto;
+    padding: 20px;
+}
+
+.form div label {
+    flex-grow: 1;
+}
+
+.form div input{
+    flex-grow: 1;
+}
+
+#genre-menu {
+    display: flex;
+    justify-content: space-around;
 }
 
 h2 {

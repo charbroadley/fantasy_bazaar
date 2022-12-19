@@ -68,9 +68,18 @@ author_1 = Author ("Terry Pratchett")
 #     print(book.__dict__)
 #     print(book.author.__dict__)
 
-author = author_repo.select(3)
-author_repo.update(author)
-print(author.__dict__)
+# author = author_repo.select(3)
+# author_repo.update(author)
+# print(author.__dict__)
+
+# book_list = book_repo.books_by_genre_fantasy()
+# for book in book_list:
+#     print(book.__dict__)
+
+book_list = book_repo.books_by_genre_scifi()
+for book in book_list:
+    print(book.__dict__)
+
 
 
 

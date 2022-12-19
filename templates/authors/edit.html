@@ -4,15 +4,12 @@
 <h2>Edit Author</h2>
 <h3>{{ author.name }}</h3>
 <br>
-<form action="/authors/{{ author.id }}" method="post">
-
+<form class="form" action="/authors/{{ author.id }}" method="post">
     <div>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Name" value="{{ author.name }}" required>
     </div>
-
     <button type="submit">Update Author</button>
-
 </form>
 
 {% endblock %}

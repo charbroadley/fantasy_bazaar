@@ -51,6 +51,28 @@ def books_by_author (author):
         books.append(book)
     return books
 
+def books_by_genre_fantasy ():
+    books = []
+    sql = "SELECT * FROM books WHERE genre = 'Fantasy'"
+    results = run_sql(sql)
+
+    for row in results:
+        book = Book(row['title'], row['author_id'], row['genre'], row['description'], row['stock_quantity'], row['buying_cost'], row['selling_price'], row['id'])
+        books.append(book)
+    return books
+
+def books_by_genre_scifi ():
+    books = []
+    sql = "SELECT * FROM books WHERE genre = 'Sci-Fi'"
+    results = run_sql(sql)
+
+    for row in results:
+        book = Book(row['title'], row['author_id'], row['genre'], row['description'], row['stock_quantity'], row['buying_cost'], row['selling_price'], row['id'])
+        books.append(book)
+    return books
+
+
+
 def delete (id):
     sql = "DELETE  FROM books WHERE id = %s"
     values = [id]

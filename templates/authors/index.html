@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 
-{% block content %}
+{% block content %}    
+<a href="/authors/new">Add Author</a>
+
 <h2>All Authors</h2>
 
 {% for author in author_list %}
 {{ author.name }} <br>
-<a href="/authors/{{ author.id }}">Full Details</a> <br>
+<a href="/authors/{{ author.id }}">All books</a> <br>
 <br>
 {% endfor %}
 <hr>
