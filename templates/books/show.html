@@ -12,20 +12,28 @@
 <br>
 <u><b>More Information</u></b><br>
 <b>Current Stock:</b> {{ book.stock_quantity }} <br>
+
+<div id= "stock-warning">
+    {% if book.stock_quantity >= 3 %}
+    <p id="in-stock">IN STOCK</p>
+    <!-- <i class="fa fa-check-circle" style="color:green" aria-hidden="true"></i> -->
+    {% else %}
+    <p id="low-stock">WARNING: LOW STOCK</p>
+    <!-- <i class="fa fa-ban" style="color:red" aria-hidden="true"></i> -->
+    {% endif %}
+</div>
+
 <b>Buying Cost:</b> £{{ book.buying_cost }}.00 <br>
 <b>Retail Price:</b> £{{ book.selling_price }}.00 <br>
 <br>
 
-<ul>
-    <li>
-        <a href="/books/{{ book.id }}/edit">Edit Book</a>
-    </li>
-    <li>
-        <form action="/books/{{ book.id }}/delete" method="post">
-            <input type="submit" value="Remove All Items From Stock">
-        </form>
-    </li>
-</ul>
+
+
+    <a href="/books/{{ book.id }}/edit">Edit Book</a>
+<br>
+    <form action="/books/{{ book.id }}/delete" method="post">
+        <input type="submit" value="Remove All Items From Stock">
+    </form>
 
 {% endblock %}
 

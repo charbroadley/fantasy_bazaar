@@ -41,3 +41,11 @@ h2 {
 h3 {
     text-align: center;
 }
+
+#in-stock{
+    color: green
+}
+
+#low-stock{
+    color: red
+}
