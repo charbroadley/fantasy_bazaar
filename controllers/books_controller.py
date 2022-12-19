@@ -28,9 +28,9 @@ def create ():
     author_id = request.form['author_id']
     genre = request.form['genre']
     description = request.form['description']
-    stock_quantity = request.form['stock-quantity']
-    buying_cost = request.form['buying-cost']
-    selling_price = request.form['retail-price']
+    stock_quantity = request.form['stock_quantity']
+    buying_cost = request.form['buying_cost']
+    selling_price = request.form['selling_price']
 
     author = author_repo.select(author_id)
     book = Book (title, author, genre, description, stock_quantity, buying_cost, selling_price)

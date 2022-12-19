@@ -13,7 +13,7 @@ def save (book):
 
 def select_all ():
     books = []
-    sql = "SELECT * FROM books"
+    sql = "SELECT * FROM books ORDER BY title ASC"
     results =run_sql (sql)
 
     for row in results:
