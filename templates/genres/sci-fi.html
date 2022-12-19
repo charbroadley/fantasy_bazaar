@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>All Sci-Fi Books in Stock</h2>
+
+{% for book in scifi_books %}
+{{ book.title }} - {{ book.author.name }} <br>
+<a href="/books/{{ book.id }}">Full Details</a> <br>
+<br>
+<hr>
+
+{% endfor %}
+
+{% endblock %}

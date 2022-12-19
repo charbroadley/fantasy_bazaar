@@ -2,11 +2,9 @@
 
 {% block content %}
 
-<a href="/books/new">Add Book</a>
+<h2>All Fantasy Books in Stock</h2>
 
-<h2>Current Stock</h2>
-
-{% for book in all_books %}
+{% for book in fantasy_books %}
 {{ book.title }} - {{ book.author.name }} <br>
 <a href="/books/{{ book.id }}">Full Details</a> <br>
 <br>
