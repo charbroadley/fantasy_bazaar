@@ -72,3 +72,5 @@ def destroy (id):
     book_repo.delete(id)
     return redirect("/books")
 
+
+
