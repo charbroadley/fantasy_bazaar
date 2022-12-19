@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<u><b>Author Details</b></u><br>
+<b>Name:</b> {{ author.name }} <br>
+
+<!-- for loop here to show list of all authors books
+thing fed in: book_list & author -->
+
+<u><b>All Books:</b></u>
+<ul>
+    {% for book in book_list %}
+        <li>{{ book.title }}</li>
+    {% endfor %}
+</ul>
+
+
+<ul>
+    <li>
+        <a href="/authors/{{ author.id }}/edit">Edit Author</a>
+    </li>
+    <li>
+        <form action="/authors/{{ author.id }}/delete" method="post">
+            <input type="submit" value="Remove Author from List">
+        </form>
+    </li>
+</ul>
+
+{% endblock %}

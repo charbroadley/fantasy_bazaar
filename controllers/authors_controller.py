@@ -12,7 +12,14 @@ def authors ():
     author = author_repo.select_all()
     return render_template("/authors/index.html", author_list = author)
 
-# Page for form to add new author
+# to see a single author page - add a function here to see all books by an author
+@authors_blueprint.route("/authors/<id>")
+def show (id):
+    author = author_repo.select(id)
+    books = book_repo.books_by_author(author)
+    return render_template("/authors/show.html", author = author, book_list = books)
+
+# page for form to add new author
 @authors_blueprint.route("/authors/new")
 def new():
     return render_template("/authors/new.html")
@@ -24,3 +31,18 @@ def create ():
     author = Author(name)
     author_repo.save(author)
     return redirect("/authors")
+
+# page for form to edit author
+@authors_blueprint.route("/authors/<id>/edit")
+def edit (id):
+    author = author_repo.select(id)
+    return render_template('/authors/edit.html', author = author)
+
+# to save the changes from the edit author form - not a new page
+@authors_blueprint.route("/authors/<id>", methods=['POST'])
+def update (id):
+    name = request.form['name']
+    author = Author(name, id)
+    author_repo.update(author)
+    return redirect("/authors")
+

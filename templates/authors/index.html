@@ -5,10 +5,10 @@
 
 {% for author in author_list %}
 {{ author.name }} <br>
-
+<a href="/authors/{{ author.id }}">Full Details</a> <br>
 <br>
+{% endfor %}
 <hr>
 
-{% endfor %}
 
 {% endblock %}

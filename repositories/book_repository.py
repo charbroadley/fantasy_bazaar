@@ -40,16 +40,16 @@ def update (book):
     run_sql(sql, values)
 
 # find all books by an author
-# def books_by_author (author):
-#     books = []
-#     sql = "SELECT * FROM books WHERE author_id = %s"
-#     values = [author.id]
-#     results = run_sql (sql, values)
+def books_by_author (author):
+    books = []
+    sql = "SELECT * FROM books WHERE author_id = %s"
+    values = [author.id]
+    results = run_sql (sql, values)
 
-#     for row in results:
-#         book = Book(row['title'], author, row['id'])
-#         books.append(book)
-#     return books
+    for row in results:
+        book = Book(row['title'], author, row['genre'], row['description'], row['stock_quantity'], row['buying_cost'], row['selling_price'], row['id'])
+        books.append(book)
+    return books
 
 def delete (id):
     sql = "DELETE  FROM books WHERE id = %s"

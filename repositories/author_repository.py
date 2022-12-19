@@ -32,6 +32,11 @@ def select_all ():
         authors.append(author)
     return authors
 
+def update (author):
+    sql = "UPDATE authors SET name = %s WHERE id = %s"
+    values = [author.name, author.id]
+    run_sql(sql, values)
+
 def delete_all():
     sql = "DELETE FROM authors"
     run_sql(sql)
