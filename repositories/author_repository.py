@@ -24,7 +24,7 @@ def select (id):
 
 def select_all ():
     authors = []
-    sql = "SELECT * FROM authors"
+    sql = "SELECT * FROM authors ORDER BY name ASC"
     results = run_sql (sql)
 
     for row in results:
