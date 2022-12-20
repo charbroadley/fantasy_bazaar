@@ -15,16 +15,8 @@ thing fed in: book_list & author -->
     {% endfor %}
 </ul>
 
+<a href="/authors/{{ author.id }}/edit">Edit Author</a>
 
-<ul>
-    <li>
-        <a href="/authors/{{ author.id }}/edit">Edit Author</a>
-    </li>
-    <li>
-        <form action="/authors/{{ author.id }}/delete" method="post">
-            <input type="submit" value="Remove Author from List">
-        </form>
-    </li>
-</ul>
+
 
 {% endblock %}

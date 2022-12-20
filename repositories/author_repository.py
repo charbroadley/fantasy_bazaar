@@ -37,10 +37,10 @@ def update (author):
     values = [author.name, author.id]
     run_sql(sql, values)
 
-def delete (id):
-    sql = "DELETE  FROM books WHERE id =%s"
-    values = [id]
-    run_sql (sql, values)
+# def delete (id):
+#     sql = "DELETE  FROM books WHERE id =%s"
+#     values = [id]
+#     run_sql (sql, values)
 
 def delete_all():
     sql = "DELETE FROM authors"
