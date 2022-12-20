@@ -2,14 +2,20 @@
 
 {% block content %}
 
-<h3>WARNING!! LOW STOCK!! <br>
+<h3>WARNING!! NO STOCK!!</h3><br>
+<p id="stock-warning">
+    {% for book in all_books %}
+        {% if book.stock_quantity == 0 %}
+            {{ book.title }} - {{ book.author.first_name }} {{ book.author.last_name }}<br>
+        {% endif %}
+    {% endfor %}
+    </p>
     <br>
-    <u>ADD TO NEXT ORDER</u>
-</h3>
+<h3>WARNING!! LOW STOCK!!</h3><br>
 <p id="stock-warning">
 {% for book in all_books %}
-    {% if book.stock_quantity <= 3 %}
-        {{ book.title }} - {{ book.author.first_name }} {{ book.author.last_name }} <br>
+    {% if book.stock_quantity <= 3 and book.stock_quantity > 0 %}
+        {{ book.title }} - {{ book.author.first_name }} {{ book.author.last_name }}<br>
     {% endif %}
 {% endfor %}
 </p>

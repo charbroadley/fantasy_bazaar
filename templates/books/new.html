@@ -25,14 +25,17 @@
 
     <div>
         <label for="genre">Genre:</label>
-        <input type="text" id="genre" name="genre" placeholder="Genre">
-    </div>
-
+        <select id="genre" name="genre">
+            <option value="Fantasy">Fantasy</option>
+            <option value="Sci-Fi">Sci-fi</option>
+    </select>
+    </div>  
     <div>
-        <label for="description">Description:</label>
-        <input type="text" id="description" name="description" placeholder="Description">
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" placeholder="Description"
+              rows="5" cols="33" required>A brief description of the book...
+    </textarea>
     </div>
-
     <div>
         <label for="stock_quantity">Stock Quantity:</label>
         <input type="number" min="1" id="stock_quantity" name="stock_quantity" required>
@@ -48,8 +51,9 @@
         <input type="number" min="1" id="selling_price" name="selling_price" required>
     </div>
 <br><br>
-    <button type="submit">Add Book</button>
-
+    <div>
+        <button type="submit">Add Book</button>
+    </div>
 </form>
 
 {% endblock %}
