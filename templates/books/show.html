@@ -15,11 +15,9 @@
 
 <div id= "stock-count">
     {% if book.stock_quantity >= 3 %}
-    <p id="in-stock">IN STOCK</p>
-    <!-- <i class="fa fa-check-circle" style="color:green" aria-hidden="true"></i> -->
+        <p id="in-stock">IN STOCK</p>
     {% else %}
-    <p id="low-stock">WARNING: LOW STOCK</p>
-    <!-- <i class="fa fa-ban" style="color:red" aria-hidden="true"></i> -->
+        <p id="low-stock">WARNING: LOW STOCK</p>
     {% endif %}
 </div>
 
