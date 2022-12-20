@@ -29,7 +29,7 @@ def new():
 def create ():
     first_name = request.form['first_name']
     last_name = request.form['last_name']
-    status = request.form['completed']
+    status = request.form['status']
     author = Author(first_name, last_name, status)
     author_repo.save(author)
     return redirect("/authors")

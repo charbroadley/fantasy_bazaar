@@ -28,13 +28,13 @@
 <br>
 
 
-
+<nav>
     <a href="/books/{{ book.id }}/edit">Edit Book</a>
 <br>
     <form action="/books/{{ book.id }}/delete" method="post">
-        <input type="submit" value="Remove All Items From Stock">
+    <input class="button" type="submit" value="Remove All Items From Stock">
     </form>
-
+</nav>
 {% endblock %}
 
 
