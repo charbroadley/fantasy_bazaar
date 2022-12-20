@@ -9,7 +9,7 @@
 <p id="stock-warning">
 {% for book in all_books %}
     {% if book.stock_quantity <= 3 %}
-        {{ book.title }} - {{ book.author.name }} <br>
+        {{ book.title }} - {{ book.author.first_name }} {{ book.author.last_name }} <br>
     {% endif %}
 {% endfor %}
 </p>

@@ -9,7 +9,7 @@
 
 
 {% for author in author_list %}
-{{ author.name }} <br>
+{{ author.first_name }} {{ author.last_name }}<br>
 <a href="/authors/{{ author.id }}">All books</a> <br>
 <br>
 {% endfor %}

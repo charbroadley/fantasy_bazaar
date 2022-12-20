@@ -39,6 +39,10 @@ a:hover {
     margin: auto; 
 } */
 
+h3 ul li{
+    list-style: none;
+}
+
 /* backgroud colour needs changing */
 .form{
     background-color: #ffcf60;
@@ -79,9 +83,17 @@ h3 {
 }
 
 #in-stock {
-    color: green
+    color: green;
 }
 
 #low-stock {
-    color: red
+    color: red;
+}
+
+#active {
+    color: green;
+}
+
+#inactive {
+    color: red;
 }

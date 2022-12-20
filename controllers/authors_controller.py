@@ -27,8 +27,10 @@ def new():
 # to save the info from the add new author form - not a new page
 @authors_blueprint.route("/authors", methods =['POST'])
 def create ():
-    name = request.form['name']
-    author = Author(name)
+    first_name = request.form['first_name']
+    last_name = request.form['last_name']
+    status = request.form['completed']
+    author = Author(first_name, last_name, status)
     author_repo.save(author)
     return redirect("/authors")
 
@@ -41,8 +43,10 @@ def edit (id):
 # to save the changes from the edit author form - not a new page
 @authors_blueprint.route("/authors/<id>", methods=['POST'])
 def update (id):
-    name = request.form['name']
-    author = Author(name, id)
+    first_name = request.form['first_name']
+    last_name = request.form['last_name']
+    status = request.form['status']
+    author = Author(first_name, last_name, status, id)
     author_repo.update(author)
     return redirect("/authors")
 

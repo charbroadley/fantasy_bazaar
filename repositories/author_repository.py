@@ -4,8 +4,8 @@ from models.book import Book
 import repositories.author_repository as author_repo
 
 def save (author):
-    sql = "INSERT INTO authors (name) VALUES (%s) RETURNING *"
-    values = [author.name]
+    sql = "INSERT INTO authors (first_name, last_name, status) VALUES (%s, %s, %s) RETURNING *"
+    values = [author.first_name, author.last_name, author.status]
     results = run_sql(sql, values)
     id = results [0] ['id']
     author.id = id
@@ -19,22 +19,22 @@ def select (id):
 
     if results:
         result = results [0]
-        author = Author(result['name'], result['id'])
+        author = Author(result['first_name'], result['last_name'], result['status'], result['id'])
     return author
 
 def select_all ():
     authors = []
-    sql = "SELECT * FROM authors ORDER BY name ASC"
+    sql = "SELECT * FROM authors ORDER BY last_name ASC"
     results = run_sql (sql)
 
     for row in results:
-        author = Author(row['name'], row['id'])
+        author = Author(row['first_name'], row['last_name'], row['status'], row['id'])
         authors.append(author)
     return authors
 
 def update (author):
-    sql = "UPDATE authors SET name = %s WHERE id = %s"
-    values = [author.name, author.id]
+    sql = "UPDATE authors SET (first_name, last_name, status) = (%s, %s, %s) WHERE id = %s"
+    values = [author.first_name, author.last_name, author.status, author.id]
     run_sql(sql, values)
 
 # def delete (id):

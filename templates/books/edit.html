@@ -14,7 +14,7 @@
             <option value="{{ author.id }}"
                 {% if book.author.id == author.id %}
                 selected="'selected" {% endif %}>
-                {{ author.name }}</option>
+                {{ author.first_name }} {{ author.last_name }}</option>
             {% endfor %}
         </select>
 
