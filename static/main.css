@@ -47,7 +47,8 @@ h3 ul li{
     background-color: #ffcf60;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 0.5rem;
     /* display: grid;
     grid-template-columns: 150px 250px;
     grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px; */
@@ -55,13 +56,20 @@ h3 ul li{
     margin: 0 auto;
     padding: 20px;
 }
-/* 
-.form div label {
-    flex-grow: 1;
+
+/* .form .title{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.form div input{
-    flex-grow: 1;
+.form .author{
+    background-color: purple;
+} */
+
+/* .form .textarea-box [type=text] {
+    width: 80%;
+    height: 100px;
 } */
 
 .form button {
