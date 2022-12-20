@@ -43,7 +43,6 @@ h3 ul li{
     list-style: none;
 }
 
-/* backgroud colour needs changing */
 .form{
     background-color: #ffcf60;
     display: flex;
@@ -56,14 +55,33 @@ h3 ul li{
     margin: 0 auto;
     padding: 20px;
 }
-
+/* 
 .form div label {
     flex-grow: 1;
 }
 
 .form div input{
     flex-grow: 1;
+} */
+
+.form button {
+    font-family: 'Roboto Mono', monospace;
+    background-color: transparent;
+    border: none;
+    color: #b01823;
+    padding-left: 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: none;
+    cursor: pointer;
 }
+
+.form button:hover {
+    text-decoration: underline;
+}
+
 
 #genre-menu {
     display: flex;
