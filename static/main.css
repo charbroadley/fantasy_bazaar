@@ -270,16 +270,8 @@ h3 {
     background-color: #ffcf60;
 }
 
-
-/* .button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
+footer{
+    color: #b01823;
+    font-size: 12px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-  } */
+}
