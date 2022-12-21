@@ -275,3 +275,11 @@ footer{
     font-size: 12px;
     text-align: center;
 }
+
+#author-status ul{
+    padding: 0px;
+}
+
+#author-status ul li{
+    list-style: none;
+}
