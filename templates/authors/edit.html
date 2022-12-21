@@ -4,16 +4,16 @@
 <h2>Edit Author</h2>
 <h3>{{ author.first_name }} {{ author.last_name }}</h3>
 <br>
-<form class="form" action="/authors/{{ author.id }}" method="post">
+<form class="authors-form" action="/authors/{{ author.id }}" method="post">
 
-        <label for="first_name">First Name:</label>
-        <input type="text" id="first_name" name="first_name" placeholder="First Name" value="{{ author.first_name }}" required>
+        <label class="firstname" for="first_name">First Name:</label>
+        <input class="firstname-input" type="text" id="first_name" name="first_name" placeholder="First Name" value="{{ author.first_name }}" required>
 
-        <label for="last_name">Last Name:</label>
-        <input type="text" id="last_name" name="last_name" placeholder="Last Name" value="{{ author.last_name }}" required>
+        <label class="lastname" for="last_name">Last Name:</label>
+        <input class="lastname-input" type="text" id="last_name" name="last_name" placeholder="Last Name" value="{{ author.last_name }}" required>
 
-        <label for="status">Status:</label>
-        <select id="status" name="status">
+        <label class="status" for="status">Status:</label>
+        <select class="status-input" id="status" name="status">
             <!-- top option is the automatic one -->
             <option value="true"
                 {% if author.status == True %}
@@ -23,7 +23,7 @@
                 selected="selected" {% endif %}>Inactive</option>
         </select>
 
-    <button type="submit">Update Author</button>
+    <button class="author-button" type="submit">Update Author</button>
 </form>
 
 {% endblock %}

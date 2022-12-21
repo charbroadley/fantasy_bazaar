@@ -45,10 +45,6 @@ h3 ul li{
 
 .form{
     background-color: #ffcf60;
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0.5rem; */
     display: grid;
     grid-template-areas: 
         'title title-input'
@@ -144,7 +140,66 @@ h3 ul li{
     text-decoration: underline;
 }
 
+.authors-form{
+    background-color: #ffcf60;
+    display: grid;
+    grid-template-areas: 
+        'firstname firstname-input'
+        'lastname lastname-input'
+        'status status-input'
+        'author-button author-button';
+    width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
+.firstname{
+    grid-area: firstname;
+}
+
+.firstname-input{
+    grid-area: firstname-input;
+}
+
+.lastname{
+    grid-area: lastname;
+}
+
+.lastname-input{
+    grid-area: lastname-input;
+    
+}
+
+.status{
+    grid-area: status;
+}
+
+.status-input{
+    grid-area: status-input;
+}
+
+.author-button{
+    grid-area: author-button;
+}
+
+.authors-form button {
+    font-family: 'Roboto Mono', monospace;
+    background-color: transparent;
+    border: none;
+    color: #b01823;
+    padding-left: 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: none;
+    cursor: pointer;
+    
+}
+
+.authors-form button:hover {
+    text-decoration: underline;
+}
 #genre-menu {
     display: flex;
     justify-content: space-around;

@@ -5,20 +5,21 @@
 <h3> Add a new author</h3>
 <br>
 
-<form class="form" action="/authors" method="post">
-        <label for="first_name">First Name:</label>
-        <input type="text" id="first_name" name="first_name" required>
+<form class="authors-form" action="/authors" method="post">
 
-        <label for="last_name">Last Name:</label>
-        <input type="text" id="last_name" name="last_name" required>
+        <label class="firstname" for="first_name">First Name:</label>
+        <input class="firstname-input" type="text" id="first_name" name="first_name" required>
 
-        <label for="status">Status:</label>
-        <select id="status" name="status">
+        <label class="lastname" for="last_name">Last Name:</label>
+        <input class="lastname-input" type="text" id="last_name" name="last_name" required>
+
+        <label class="status" for="status">Status:</label>
+        <select class="status-input" id="status" name="status">
             <option value="true">Active</option>
             <option value="false">Inactive</option>
         </select>
 
-        <button type="submit">Add Author</button>
+        <button class="author-button" type="submit">Add Author</button>
 </form>
 
 {% endblock %}
