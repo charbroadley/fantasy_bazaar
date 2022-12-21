@@ -45,32 +45,85 @@ h3 ul li{
 
 .form{
     background-color: #ffcf60;
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 0.5rem;
-    /* display: grid;
-    grid-template-columns: 150px 250px;
-    grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px; */
+    gap: 0.5rem; */
+    display: grid;
+    grid-template-areas: 
+        'title title-input'
+        'author author-input'
+        'genre genre-input'
+        'desc desc'
+        'desc-input desc-input'
+        'stock stock-input'
+        'buying buying-input'
+        'selling selling-input'
+        'book-button book-button';
     width: 350px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* .form .title{
-    background-color: aquamarine;
-    display: flex;
-    justify-content: flex-end;
+.title{
+    grid-area: title;
 }
 
-.form .author{
-    background-color: purple;
-} */
+.title-input{
+    grid-area: title-input;
+}
 
-/* .form .textarea-box [type=text] {
-    width: 80%;
-    height: 100px;
-} */
+.author{
+    grid-area: author;
+}
+
+.author-input{
+    grid-area: author-input;
+}
+
+.genre{
+    grid-area: genre;
+}
+
+.genre-input{
+    grid-area: genre-input;
+}
+
+.desc{
+    grid-area: desc;
+}
+
+.desc-input{
+    grid-area: desc-input;
+}
+
+.stock{
+    grid-area: stock;
+}
+
+.stock-input{
+    grid-area: stock-input;
+}
+
+.buying{
+    grid-area: buying;
+}
+
+.buying-input{
+    grid-area: buying-input;
+}
+
+.selling{
+    grid-area: selling;
+}
+
+.selling-input{
+    grid-area: selling-input;
+}
+
+.book-button{
+    grid-area: book-button;
+}
 
 .form button {
     font-family: 'Roboto Mono', monospace;
@@ -84,6 +137,7 @@ h3 ul li{
     font-size: 16px;
     margin: none;
     cursor: pointer;
+    
 }
 
 .form button:hover {

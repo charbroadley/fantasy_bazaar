@@ -5,13 +5,12 @@
 <h3> Edit a book already in stock</h3>
 <br>
 <form class="form" action="/books/{{ book.id }}" method="post">
-    <div>   
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" value="{{ book.title }}" required>
-    </div> 
-    <div>
-        <label for="author_id">Author:</label>
-            <select id="author_id" name="author_id">
+
+        <label class="title" for="title">Title:</label>
+        <input class="title-input" type="text" id="title" name="title" value="{{ book.title }}" required>
+
+        <label class="author" for="author_id">Author:</label>
+            <select class="author-input" id="author_id" name="author_id">
             {% for author in all_authors %}
             <option value="{{ author.id }}"
                 {% if book.author.id == author.id %}
@@ -19,34 +18,26 @@
                 {{ author.first_name }} {{ author.last_name }}</option>
             {% endfor %}
         </select>
-    </div>
-    <div>
-        <label for="genre">Genre:</label>
-        <input type="text" id="genre" name="genre" value="{{ book.genre }}" required>
-    </div>
- 
-    <div>
-        <label for="description">Description:</label>
-        <textarea class="textarea-box" id="description" name="description" value="{{ book.description }}"
+
+        <label class="genre" for="genre">Genre:</label>
+        <input class="genre-input" type="text" id="genre" name="genre" value="{{ book.genre }}" required>
+
+        <label class="desc" for="description">Description:</label>
+        <textarea class="desc-input" class="textarea-box" id="description" name="description" value="{{ book.description }}"
                   rows="5" cols="40" required>{{ book.description }}
         </textarea>
-        </div>
-    <div>
-        <label for="stock-quantity">Stock Quantity:</label>
-        <input type="number" min=0 id="stock-quantity" name="stock_quantity" value="{{ book.stock_quantity }}" required>
-    </div>
-    <div>
-        <label for="buying-cost">Buying Cost:</label>
-        <input type="number" min=1 id="buying-cost" name="buying_cost" value="{{ book.buying_cost }}" required>
-    </div>
-    <div>
-        <label for="retail-price">Retail Price:</label>
-        <input type="number" min=1 id="retail-price" name="selling_price" value="{{ book.selling_price }}" required>
-    </div>
-<br><br>
-    <div>
-        <button type="submit">Update Book</button>
-    </div>
+
+        <label class="stock" for="stock-quantity">Stock Quantity:</label>
+        <input class="stock-input" type="number" min=0 id="stock-quantity" name="stock_quantity" value="{{ book.stock_quantity }}" required>
+
+        <label class="buying" for="buying-cost">Buying Cost:</label>
+        <input class="buying-input" type="number" min=1 id="buying-cost" name="buying_cost" value="{{ book.buying_cost }}" required>
+
+        <label class="selling" for="retail-price">Retail Price:</label>
+        <input class="selling-input" type="number" min=1 id="retail-price" name="selling_price" value="{{ book.selling_price }}" required>
+
+        <button class="book-button" type="submit">Update Book</button>
+
 </form>
 
 {% endblock %}
