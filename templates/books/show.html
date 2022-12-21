@@ -14,12 +14,15 @@
 <b>Current Stock:</b> {{ book.stock_quantity }} <br>
 
 <div id= "stock-count">
-    {% if book.stock_quantity >= 3 %}
+    {% if book.stock_quantity > 3 %}
         <p id="in-stock">IN STOCK</p>
-    {% else %}
+    {% elif book.stock_quantity <= 3 and book.stock_quantity > 0 %}
         <p id="low-stock">WARNING: LOW STOCK</p>
+    {% else %} 
+        <p id="low-stock">WARNING: OUT OF STOCK</p>
     {% endif %}
 </div>
+
 
 <b>Buying Cost:</b> £{{ book.buying_cost }}.00 <br>
 <b>Retail Price:</b> £{{ book.selling_price }}.00 <br>
