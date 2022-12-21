@@ -2,23 +2,42 @@
 
 {% block content %}
 
-<h3>WARNING!! NO STOCK!!</h3><br>
-<p id="stock-warning">
-    {% for book in all_books %}
-        {% if book.stock_quantity == 0 %}
-            {{ book.title }} - {{ book.author.first_name }} {{ book.author.last_name }}<br>
-        {% endif %}
-    {% endfor %}
+<div id="homepage">
+
+<div id="homepage-left">
+
+    <div id="out-of-stock-message">
+    <h3>OUT OF STOCK</h3><br>
+        <p>{% for book in all_books %}
+                {% if book.stock_quantity == 0 %}       
+                    {{ book.title }} - {{ book.author.first_name }} {{ book.author.last_name }}<br>
+                {% endif %}
+            {% endfor %}
+        </p>   
+    </div>
+
+<br>
+
+    <div id="low-stock-message">
+    <h3>LOW STOCK</h3><br> 
+        <p>{% for book in all_books %}
+            {% if book.stock_quantity <= 3 and book.stock_quantity > 0 %}
+                {{ book.title }} - {{ book.author.first_name }} {{ book.author.last_name }}<br>
+            {% endif %}
+        {% endfor %}
     </p>
-    <br>
-<h3>WARNING!! LOW STOCK!!</h3><br>
-<p id="stock-warning">
-{% for book in all_books %}
-    {% if book.stock_quantity <= 3 and book.stock_quantity > 0 %}
-        {{ book.title }} - {{ book.author.first_name }} {{ book.author.last_name }}<br>
-    {% endif %}
-{% endfor %}
-</p>
+    </div>
+
+</div>
+
+<div id="homepage-right">
+    <h3>SHOP UPDATE</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, obcaecati. Magni hic magnam quam iure vitae reprehenderit unde iste ipsum perspiciatis! Hic atque id veniam similique suscipit nobis. Esse voluptates minima deserunt eaque non adipisci labore quisquam. Maxime illo tenetur hic nesciunt saepe cum expedita at enim incidunt voluptatem autem dolorem porro optio nostrum sed, iure dicta deserunt voluptas perferendis ad veritatis corporis repellat deleniti! Cupiditate suscipit voluptas, veritatis minima repellat impedit nulla. Eaque blanditiis est aliquid perspiciatis omnis ad ipsam ullam fugiat optio sapiente commodi harum a facere, vitae numquam labore rem. Illum enim nobis aperiam porro quam consequuntur!
+        </p>
+    </div>
+
+    
+</div>
 
 {% endblock %}
 

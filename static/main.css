@@ -34,10 +34,6 @@ a {
 a:hover {
     background-color: #ffcf60;
 }
-/* 
-.add-link {
-    margin: auto; 
-} */
 
 h3 ul li{
     list-style: none;
@@ -213,8 +209,31 @@ h3 {
     text-align: center;
 }
 
-#stock-warning {
+#homepage{
+    display: grid;
+    grid-template-areas:
+    'homepage-left homepage-right';
+    grid-template-columns: 40% 60%;
+    /* width: 80%; */
+}
+
+#homepage-left{
+    display: grid;
+    grid-template-areas:
+    'out-of-stock-message'
+    'low-stock-message';
+}
+
+#out-of-stock-message{
     text-align: center;
+}
+
+#low-stock-message{
+    text-align: center;
+}
+
+#homepage-right p{
+    text-align: justify;
 }
 
 #in-stock {
