@@ -4,7 +4,8 @@
 
 body {
     font-family: 'Roboto Mono', monospace;
-    background-color:lightgray
+    background-color:lightgray;
+    border: 20px;
 }
 
 nav ul {
@@ -214,7 +215,6 @@ h3 {
     grid-template-areas:
     'homepage-left homepage-right';
     grid-template-columns: 40% 60%;
-    /* width: 80%; */
 }
 
 #homepage-left{
@@ -222,6 +222,7 @@ h3 {
     grid-template-areas:
     'out-of-stock-message'
     'low-stock-message';
+    padding: 20px;
 }
 
 #out-of-stock-message{
@@ -234,6 +235,7 @@ h3 {
 
 #homepage-right p{
     text-align: justify;
+    padding: 20px;
 }
 
 #in-stock {
