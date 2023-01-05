@@ -49,9 +49,3 @@ def update (id):
     author = Author(first_name, last_name, status, id)
     author_repo.update(author)
     return redirect("/authors")
-
-# delete just needs a button
-# @authors_blueprint.route("/authors/<id>/delete", methods=['POST'])
-# def destroy (id):
-#     author_repo.delete(id)
-#     return redirect("/authors")
