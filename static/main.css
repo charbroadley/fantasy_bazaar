@@ -43,6 +43,7 @@ h3 ul li{
 
 .form{
     background-color: #ffcf60;
+    border-radius: 10px;
     display: grid;
     grid-template-areas: 
         'title title-input'
@@ -140,6 +141,7 @@ h3 ul li{
 
 .authors-form{
     background-color: #ffcf60;
+    border-radius: 10px;
     display: grid;
     grid-template-areas: 
         'firstname firstname-input'
