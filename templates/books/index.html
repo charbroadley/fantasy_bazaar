@@ -3,19 +3,24 @@
 {% block content %}
 <h2>Current Stock</h2> 
 <br>
-<a class="add-link" href="/books/new">Add a new book to stock</a>
 
-<br><br><br>
+<div class="add-link">
+    <a href="/books/new">Add a new book to stock</a>
+</div>
 
-
-
-
-{% for book in all_books %}
-{{ book.title }} - {{ book.author.first_name }} {{ book.author.last_name }} <br>
-<a href="/books/{{ book.id }}">Full Details</a> <br>
 <br>
-<hr>
+
+<div class="all-tiles-container">
+{% for book in all_books %}
+
+<div class="single-tile">
+{{ book.title }}<br>
+{{ book.author.first_name }} {{ book.author.last_name }} <br>
+<a href="/books/{{ book.id }}">Full Details</a> <br>
+</div>
+
 
 {% endfor %}
+</div>
 
 {% endblock %}

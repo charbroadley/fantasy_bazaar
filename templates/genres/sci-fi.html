@@ -4,12 +4,15 @@
 
 <h2>All Sci-Fi Books in Stock</h2>
 
+<div class="all-tiles-container">
 {% for book in scifi_books %}
+
+<div class="single-tile">
 {{ book.title }} - {{ book.author.first_name }} {{ book.author.last_name }} <br>
 <a href="/books/{{ book.id }}">Full Details</a> <br>
-<br>
-<hr>
+</div>
 
 {% endfor %}
+</div>
 
 {% endblock %}

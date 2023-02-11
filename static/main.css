@@ -19,6 +19,7 @@ nav ul li {
 }
 
 nav ul li a {
+    font-size: 1.2em;
     text-decoration: none;
     color: #b01823;
 }
@@ -210,14 +211,14 @@ h3 {
     text-align: center;
 }
 
-#homepage{
+#homepage {
     display: grid;
     grid-template-areas:
     'homepage-left homepage-right';
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 35% 65%;
 }
 
-#homepage-left{
+#homepage-left {
     display: grid;
     grid-template-areas:
     'out-of-stock-message'
@@ -225,16 +226,32 @@ h3 {
     padding: 20px;
 }
 
-#out-of-stock-message{
+#out-of-stock-message {
     text-align: center;
+    background-color: #ffcf60;
+    border-radius: 10px;
+    padding: 10px;
 }
 
-#low-stock-message{
+#low-stock-message {
     text-align: center;
+    background-color: #ffcf60;
+    border-radius: 10px;
+    padding: 10px;
 }
 
-#homepage-right p{
+#homepage-right {
+    padding: 20px;
+}
+
+#homepage-right p {
     text-align: justify;
+    padding: 20px;
+}
+
+#shop-news {
+    background-color: #ffcf60;
+    border-radius: 10px;
     padding: 20px;
 }
 
@@ -272,16 +289,39 @@ h3 {
     background-color: #ffcf60;
 }
 
-footer{
+footer {
     color: #b01823;
     font-size: 12px;
     text-align: center;
 }
 
-#author-status ul{
+#author-status ul {
     padding: 0px;
 }
 
-#author-status ul li{
+#author-status ul li {
     list-style: none;
+}
+
+.single-tile {
+    background-color: #ffcf60;
+    border-radius: 10px;
+    width: 20%;
+    height: 100px;
+    padding: 10px;
+}
+
+.single-tile a:hover {
+    text-decoration: underline;
+}
+
+.all-tiles-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.add-link {
+    text-align: center;
 }

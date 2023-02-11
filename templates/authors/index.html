@@ -3,17 +3,22 @@
 {% block content %}
 <h2>All Authors</h2> 
 <br>
-<a href="/authors/new" class="add-link">Add a new author</a>
 
-<br><br><br>
+<div class="add-link">
+    <a href="/authors/new" >Add a new author</a>
+</div>
 
+<br>
 
+<div class="all-tiles-container">
 {% for author in author_list %}
+
+<div class="single-tile">
 {{ author.first_name }} {{ author.last_name }}<br>
 <a href="/authors/{{ author.id }}">All books</a> <br>
-<br>
-<hr>
-{% endfor %}
+</div>
 
+{% endfor %}
+</div>
 
 {% endblock %}
