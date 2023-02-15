@@ -15,20 +15,18 @@ I was inspired by the comic-book shop in the TV program Spaced, The Fantasy Baza
 ## Getting Started
 
 Install flask & psycopg:<br/>
-
 `pip3 install Flask`<br/>
 `pip3 install psycopg2`<br/>
 
 Create & seed the database:<br/>
-
 `createdb bookshop`<br/>
 `psql -d bookshop -f`<br/>
 
 Run the app:<br/>
-
 `flask run`
 
-View the web application in the browswer by navigating to: http://localhost:4999
+View the web application in the browswer by navigating to:<br/>
+http://localhost:4999
 
 ## Tech Used
 - Python
