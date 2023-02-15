@@ -1,8 +1,6 @@
 # Fantasy Bazaar
 
 ![Fantasy Bazaar homepage showing shop news & stock warnings](static/images/home-page.png)
-![View all books currently in stock](static/images/all-books.png)
-![Filter books by genre](static/images/filter-by-genre.png)
 
 ## The Brief
 
