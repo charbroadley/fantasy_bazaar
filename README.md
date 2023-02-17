@@ -1,6 +1,7 @@
 # Fantasy Bazaar
 
-![Fantasy Bazaar homepage showing shop news & stock warnings](static/images/home-page.png)
+<img width="400" alt="Fantasy Bazaar homepage showing shop news & stock warnings" src="static/images/home-page.png"></img>
+<!-- ![Fantasy Bazaar homepage showing shop news & stock warnings](static/images/home-page.png) -->
 
 ## The Brief
 
