@@ -18,7 +18,7 @@ Install flask & psycopg:<br/>
 
 Create & seed the database:<br/>
 `createdb bookshop`<br/>
-`psql -d bookshop -f`<br/>
+`psql -d bookshop -f db/booksop.sql`<br/>
 
 Run the app:<br/>
 `flask run`
